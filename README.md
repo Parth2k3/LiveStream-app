@@ -77,27 +77,27 @@ Description: Delete a specific overlay configuration.<br>
 <h3>Setup</h3><br>
 <h5>Clone the Repository:</h5><br>
 <br>
-Copy code<br>
+<br>
 https://github.com/Parth2k3/LiveStream-app.git<br>
 <h5>Navigate to the Project Directory:</h5><br>
 Install Dependencies: For the backend (Flask):<br>
 bash<br>
-Copy code<br>
+<br>
 cd backend<br>
 pip install -r requirements.txt<br>
 <h5>For the frontend (React):</h5><br>
 bash<br>
-Copy code<br>
+<br>
 cd livestream-app<br>
 npm install<br>
 <h5>Start the Backend:</h5><br>
 bash<br>
-Copy code<br>
+<br>
 cd backend<br>
 python app.py<br>
 <h5>Start the Frontend:</h5><br>
 bash<br>
-Copy code<br>
+<br>
 cd livestream-app<br>
 npm start<br>
 <h3>Using the Application</h3><br>
@@ -133,6 +133,6 @@ Verify Installation:<br>
 <br>
 Open Command Prompt and type:<br>
 bash<br>
-Copy code<br>
+<br>
 ffmpeg -version<br>
 You should see the version information if FFmpeg is installed correctly.<br>
