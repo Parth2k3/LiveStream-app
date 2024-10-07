@@ -101,17 +101,17 @@ Copy code<br>
 cd livestream-app<br>
 npm start<br>
 <h3>Using the Application</h3><br>
-Open your browser and go to http://localhost:5000/start-stream to start the stream initially.<br>
-Open your browser and go to http://localhost:3000.<br>
+1. Open your browser and go to http://localhost:5000/start-stream to start the stream initially.<br>
+2. Open your browser and go to http://localhost:3000.<br>
 <h3>Managing Overlays</h3><br>
-Add Text: Click on "Add Text" and input your text. You can drag it to reposition. Double click to edit the text.<br>
-Add Logo: Upload an image file to add a logo overlay. You can drag it to reposition.<br>
-Save Overlay: Click on "Save Overlay" to save your current overlays.<br>
-Load Overlay: Select a saved overlay from the dropdown to apply it.<br>
-
-NOTE* - The RSTP URL might expire (used in the backend/app.py Line 42) since it can be active for at max 99999 seconds, so at the time of testing we can replace the RSTP URL with new generated URL from RSTP.me<br>
-NOTE* - The project's backend uses ffmpeg to convert RSTP to HLS format for live streaming the video to the frontend. So, for this we require the ffmpeg installed on the system and set to PATH variable in Environment Variables.<br>
-Installation for Windows<br>
+1. Add Text: Click on "Add Text" and input your text. You can drag it to reposition. Double click to edit the text.<br>
+2. Add Logo: Upload an image file to add a logo overlay. You can drag it to reposition.<br>
+3. Save Overlay: Click on "Save Overlay" to save your current overlays.<br>
+4. Load Overlay: Select a saved overlay from the dropdown to apply it.<br>
+<br><br><br>
+**NOTE*** - The RSTP URL might expire (used in the backend/app.py Line 42) since it can be active for at max 99999 seconds, so at the time of testing we can replace the RSTP URL with new generated URL from RSTP.me<br><br>
+<br> - The project's backend uses ffmpeg to convert RSTP to HLS format for live streaming the video to the frontend. So, for this we require the ffmpeg installed on the system and set to PATH variable in Environment Variables.<br><br><br><br>
+<h5>Installation for Windows</h5><br>
 Download the FFmpeg Executable:<br>
 
 Go to the FFmpeg official website.<br>
