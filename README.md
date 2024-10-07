@@ -72,42 +72,67 @@ json<br>
 <h5>6. Delete Overlay</h5><br>
 DELETE /overlay/{id}<br>
 Description: Delete a specific overlay configuration.<br>
-User Documentation<br>
-Setup<br>
-Clone the Repository:<br>
-bash
-Copy code
-git clone https://github.com/yourusername/your-repo-name.git
-Navigate to the Project Directory:
-bash
-Copy code
-cd your-repo-name
-Install Dependencies: For the backend (Flask):
-bash
-Copy code
-cd backend
-pip install -r requirements.txt
-For the frontend (React):
-bash
-Copy code
-cd frontend
-npm install
-Start the Backend:
-bash
-Copy code
-cd backend
-python app.py
-Start the Frontend:
-bash
-Copy code
-cd frontend
-npm start
-Using the Application
-Open your browser and go to http://localhost:3000.
-Input the RTSP URL for the video stream in the specified field.
-Click "Start Stream" to begin the video playback.
-Managing Overlays
-Add Text: Click on "Add Text" and input your text. You can drag it to reposition.
-Add Logo: Upload an image file to add a logo overlay.
-Save Overlay: Click on "Save Overlay" to save your current overlays.
-Load Overlay: Select a saved overlay from the dropdown to apply it.
+
+<h1>User Documentation</h1><br>
+<h3>Setup</h3><br>
+<h5>Clone the Repository:</h5><br>
+<br>
+Copy code<br>
+https://github.com/Parth2k3/LiveStream-app.git<br>
+<h5>Navigate to the Project Directory:</h5><br>
+Install Dependencies: For the backend (Flask):<br>
+bash<br>
+Copy code<br>
+cd backend<br>
+pip install -r requirements.txt<br>
+<h5>For the frontend (React):</h5><br>
+bash<br>
+Copy code<br>
+cd livestream-app<br>
+npm install<br>
+<h5>Start the Backend:</h5><br>
+bash<br>
+Copy code<br>
+cd backend<br>
+python app.py<br>
+<h5>Start the Frontend:</h5><br>
+bash<br>
+Copy code<br>
+cd livestream-app<br>
+npm start<br>
+<h3>Using the Application</h3><br>
+Open your browser and go to http://localhost:5000/start-stream to start the stream initially.<br>
+Open your browser and go to http://localhost:3000.<br>
+<h3>Managing Overlays</h3><br>
+Add Text: Click on "Add Text" and input your text. You can drag it to reposition. Double click to edit the text.<br>
+Add Logo: Upload an image file to add a logo overlay. You can drag it to reposition.<br>
+Save Overlay: Click on "Save Overlay" to save your current overlays.<br>
+Load Overlay: Select a saved overlay from the dropdown to apply it.<br>
+
+NOTE* - The RSTP URL might expire (used in the backend/app.py Line 42) since it can be active for at max 99999 seconds, so at the time of testing we can replace the RSTP URL with new generated URL from RSTP.me<br>
+NOTE* - The project's backend uses ffmpeg to convert RSTP to HLS format for live streaming the video to the frontend. So, for this we require the ffmpeg installed on the system and set to PATH variable in Environment Variables.<br>
+Installation for Windows<br>
+Download the FFmpeg Executable:<br>
+
+Go to the FFmpeg official website.<br>
+Click on the Windows logo to navigate to the Windows builds.<br>
+Choose a build (e.g., the gyan.dev builds) and download the latest ffmpeg-release-full.zip file.<br>
+Extract the Files:<br>
+
+Right-click the downloaded zip file and select Extract All.<br>
+Choose a destination folder (e.g., C:\ffmpeg) to extract the contents.<br>
+Add FFmpeg to System PATH:<br>
+
+Press Win + X and select System.<br>
+Click on Advanced system settings on the left panel.<br>
+Click on the Environment Variables button.<br>
+Under System variables, find the Path variable and select it, then click Edit.<br>
+Click New and add the path to the bin directory of the extracted FFmpeg (e.g., C:\ffmpeg\bin).<br>
+Click OK to close all the dialog boxes.<br>
+Verify Installation:<br>
+<br>
+Open Command Prompt and type:<br>
+bash<br>
+Copy code<br>
+ffmpeg -version<br>
+You should see the version information if FFmpeg is installed correctly.<br>
